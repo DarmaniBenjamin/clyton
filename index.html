@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre-Shop</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">C K Pierre</a>
+
+            <i class='bx bxs-shopping-bags' id="cart-icon"></i>
+
+            <div class="cart">
+                <h2 class="cart-title">order</h2>
+
+                <i class='bx bx-x' id="close-cart"></i>
+
+
+                <form action="https://formspree.io/f/xgebjvnk" method="POST">
+            
+                    <input type="text" name="first" placeholder="First Name" autocomplete="on" required>
+                    <input type="text" name="last" placeholder="Last Name" autocomplete="on" required>
+                    <input type="emai" name="email" placeholder="Email Address" autocomplete="on" >
+                    <input type="number" onkeydown="validPhoneNumber()" name="phone" placeholder="Phone number" required id="phone-number">
+                    
+                    <div class="select">
+                        <select name="selectedItem" class="one" required>
+                            <option value="" disabled selected>Choose Your Products</option>
+                            <option value="Water">Water</option>
+                            <option value="Busta">Busta</option>
+                            <option value="Twix">Twix</option>
+                        </select>
+                        <select name="quantity" class="two" required>
+                            <option value="" disabled selected>Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+            
+                    <!--<textarea name="message" id="" cols="60" rows="5"></textarea>-->
+            
+                    <button type="submit" class="btn-buy">Place Order</button>
+            
+                </form>
+
+ 
+
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Products</h2>
+
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.69b99e0fc59e2f86a8b352e2c1585e03?rik=NZsaLwHHP66Muw&pid=ImgRaw&r=0" alt="Black Opium" class="product-img">
+                <h2 class="product-title">Black Opium</h2>
+                <span class="price">$325</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.JoS4hi8d7PD_EBMoeS1iBQHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">DKNY stories</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://fimgs.net/images/secundar/o.46311.jpg" alt="" class="product-img">
+                <h2 class="product-title">ange ou demon</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://www.perfumeblvd.com/images/images/Bvlgari%20Man%20In%20Black%20Cologne%203.4oz.jpg" alt="" class="product-img">
+                <h2 class="product-title">bvlgari</h2>
+                <span class="price">$280</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.3611b39f79670dabc68063ac3ae41979?rik=ep69Za39zlPfqQ&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">Giorgio armani</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://cdn.shopify.com/s/files/1/2978/5842/products/perfume-lacoste-touch-of-pink-for-women-eau-de-toilette-spray-2_1024x1024.jpg?v=1546633549" alt="" class="product-img">
+                <h2 class="product-title">Lacoste touch of pink</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://perfumediary.com/media/reviews/photos/original/9d/4a/57/paco-rabanne-million-lucky-perfume-34-1524555217.jpg" alt="" class="product-img">
+                <h2 class="product-title">million lucky</h2>
+                <span class="price">$300</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.191a883307e87cd54ee7504db2713d63?rik=hXjrLqX2Hu5Jxg&riu=http%3a%2f%2ffimgs.net%2fimages%2fperfume%2fo.32566.jpg&ehk=IXZi43i1ElSHrZiJK3OVmaW2MoNgIY7TTMMDVMP%2bwfA%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">burberry</h2>
+                <span class="price">$250</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://media.static-allbeauty.com/image/product/1/1600/1163019-paco-rabanne-lady-million-eau-de-parfum-spray-80ml.jpg" alt="" class="product-img">
+                <h2 class="product-title">lady million</h2>
+                <span class="price">$325</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://www.pricerunner.com/product/1200x1200/1906579000/Paco-Rabanne-Lady-Million-Empire-EdP-30ml.jpg" alt="" class="product-img">
+                <h2 class="product-title">lady million empire</h2>
+                <span class="price">$325</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.LlAUwuEfXnaSdVtsF9EyKwHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">dkny nectar</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.c0332e2e1c55768470018c0072adf09d?rik=wU6tuTZEfkoeAA&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">sauvage parfum</h2>
+                <span class="price">$350</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://www.ezebra.pl/pol_pl_GIORGIO-ARMANI-MY-WAY-WODA-PERFUMOWANA-SPRAY-30ML-124529_1.jpg" alt="" class="product-img">
+                <h2 class="product-title">my way</h2>
+                <span class="price">$300</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://www.fatin.ma/wp-content/uploads/2020/09/Lancome_tresor_in_love_edpf.jpg" alt="" class="product-img">
+                <h2 class="product-title">tresor in love</h2>
+                <span class="price">$250</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.7TndSX3fIdLurSL_i_dwdwHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">calvin klein</h2>
+                <span class="price">$275</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://www.faureal.co.za/wp-content/uploads/2018/02/Carolina-Herrera-212-ROSE-are-you-on-the-list-NYC.jpg" alt="" class="product-img">
+                <h2 class="product-title">carolina herrera 212 vip</h2>
+                <span class="price">$300</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://fimgs.net/himg/o.vaWNdQCGxCV.jpg" alt="" class="product-img">
+                <h2 class="product-title">phantom paco rabanne</h2>
+                <span class="price">$280</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://assets.goldenscent.com/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/c/h/chanel_blue_de_chanel_2.jpg" alt="" class="product-img">
+                <h2 class="product-title">bleu de chanel</h2>
+                <span class="price">$350</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://fragrancehouse.co.uk/wp-content/uploads/2020/01/Carolina-Herrera-Bad-Boy-Eau-De-Toilette-100ml-Pack-Shot-300x300.jpg" alt="" class="product-img">
+                <h2 class="product-title">bad boy</h2>
+                <span class="price">$275</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://fimgs.net/images/secundar/o.33954.jpg" alt="" class="product-img">
+                <h2 class="product-title">love rock</h2>
+                <span class="price">$175</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.Oc7FU0WTfyM-Lk-ucX-hWQHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">ralph lauren romance</h2>
+                <span class="price">$250</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://images.usc.co.uk/images/products/75491990_l.jpg" alt="" class="product-img">
+                <h2 class="product-title">love struck perfume</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.993e81a49249c16af5372909270303a2?rik=S2eP%2fOfXUkCRRg&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">ralph lauren 2</h2>
+                <span class="price">$250</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.S1PnzSApE4lxEKrumig-3QHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">eau de rhubarbe ecarlate</h2>
+                <span class="price">$175</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://vioralondon.com/wp-content/uploads/2021/03/Green-Tea-Fig.jpg" alt="" class="product-img">
+                <h2 class="product-title">elizabeth arden green tea</h2>
+                <span class="price">$200</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.7B0K6CpyAMB--F4jXfs7vwHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">un jardin sur la lagune</h2>
+                <span class="price">$175</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.1328cc0ca0e42525e0d2a9df79f4d95c?rik=d8BNKEVdcXf%2bJQ&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">terre d'hermes</h2>
+                <span class="price">$320</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.2a69c858848962a0fda28558ac9118f0?rik=qS6m5KWeEG0jlw&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">coco eau de</h2>
+                <span class="price">$350</span>
+            </div>
+
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/R.521f855ff4f7cf848e3a92f42a9f11b3?rik=3PzQXHf%2b9J7NAg&riu=http%3a%2f%2fthekit.ca%2fwp-content%2fgallery%2fck%2f180-ck.jpg&ehk=VnYT8s0nq6%2fUcGgTnKqRNDbTK1zsDlXfEASPtzXNN9M%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
+                <h2 class="product-title">ck one shock, for him, for her</h2>
+                <span class="price">$200</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://i.notino.com/view/dior/chdad4w_aedp10_01__10.jpg" alt="" class="product-img">
+                <h2 class="product-title">dior</h2>
+                <span class="price">$290</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://i.ebayimg.com/images/g/iHkAAOSwAS5c~-o6/s-l400.jpg" alt="" class="product-img">
+                <h2 class="product-title">versace eros pour femme</h2>
+                <span class="price">$325</span>
+            </div>
+
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.BIqkjSdEda-qeYAg0ozbvgHaHa?pid=ImgDet&rs=1" alt="" class="product-img">
+                <h2 class="product-title">poison dior</h2>
+                <span class="price">$275</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
